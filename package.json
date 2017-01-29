@@ -1,0 +1,18 @@
+{
+  "name": "atom-zh-dictionary",
+  "main": "./lib/atom-zh-dictionary",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "atom-zh-dictionary:toggle"
+  },
+  "repository": "https://github.com/chendotjs/atom-zh-dictionary",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
