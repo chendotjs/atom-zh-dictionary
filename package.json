@@ -11,7 +11,10 @@
     "defaultDictionary": {
       "type": "string",
       "default": "Shanbay",
-      "enum": ["Shanbay", "OS X"],
+      "enum": [
+        "Shanbay",
+        "OS X"
+      ],
       "description": "Default dictionary to look up"
     }
   },
@@ -20,5 +23,7 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "request": "^2.79.0"
+  }
 }
