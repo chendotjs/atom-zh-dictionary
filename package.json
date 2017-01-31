@@ -3,16 +3,22 @@
   "main": "./lib/atom-zh-dictionary",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
-    "atom-workspace": "atom-zh-dictionary:toggle"
+    "atom-workspace": "atom-zh-dictionary:mean"
+  },
+  "configSchema": {
+    "defaultDictionary": {
+      "type": "string",
+      "default": "Shanbay",
+      "enum": ["Shanbay", "OS X"],
+      "description": "Default dictionary to look up"
+    }
   },
   "repository": "https://github.com/chendotjs/atom-zh-dictionary",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

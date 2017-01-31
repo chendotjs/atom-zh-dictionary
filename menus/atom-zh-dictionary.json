@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle atom-zh-dictionary",
-        "command": "atom-zh-dictionary:toggle"
+        "label": "mean atom-zh-dictionary",
+        "command": "atom-zh-dictionary:mean"
       }
     ]
   },
@@ -15,8 +15,8 @@
           "label": "atom-zh-dictionary",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "atom-zh-dictionary:toggle"
+              "label": "mean",
+              "command": "atom-zh-dictionary:mean"
             }
           ]
         }

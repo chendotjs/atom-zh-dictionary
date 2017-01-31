@@ -15,7 +15,7 @@ describe('AtomZhDictionary', () => {
     activationPromise = atom.packages.activatePackage('atom-zh-dictionary');
   });
 
-  describe('when the atom-zh-dictionary:toggle event is triggered', () => {
+  describe('when the atom-zh-dictionary:mean event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
@@ -23,7 +23,7 @@ describe('AtomZhDictionary', () => {
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:mean');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -37,7 +37,7 @@ describe('AtomZhDictionary', () => {
 
         let atomZhDictionaryPanel = atom.workspace.panelForItem(atomZhDictionaryElement);
         expect(atomZhDictionaryPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:toggle');
+        atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:mean');
         expect(atomZhDictionaryPanel.isVisible()).toBe(false);
       });
     });
@@ -55,7 +55,7 @@ describe('AtomZhDictionary', () => {
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:mean');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -65,7 +65,7 @@ describe('AtomZhDictionary', () => {
         // Now we can test for view visibility
         let atomZhDictionaryElement = workspaceElement.querySelector('.atom-zh-dictionary');
         expect(atomZhDictionaryElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:toggle');
+        atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:mean');
         expect(atomZhDictionaryElement).not.toBeVisible();
       });
     });
