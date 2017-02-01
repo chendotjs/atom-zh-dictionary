@@ -1,9 +1,9 @@
 {
   "name": "atom-zh-dictionary",
   "main": "./lib/atom-zh-dictionary",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "A short description of your package",
-  "keywords": [],
+  "keywords": ["dictionary", "dict", "chinese", "shanbay", "youdao"],
   "activationCommands": {
     "atom-workspace": "atom-zh-dictionary:mean"
   },
