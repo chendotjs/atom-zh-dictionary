@@ -2,10 +2,11 @@
   "name": "atom-zh-dictionary",
   "main": "./lib/atom-zh-dictionary",
   "version": "0.3.0",
-  "description": "A short description of your package",
+  "description": "A plugin for tanslating english/chinese",
   "keywords": [
     "dictionary",
     "dict",
+    "zh",
     "chinese",
     "shanbay",
     "youdao"

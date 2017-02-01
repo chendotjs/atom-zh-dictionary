@@ -1,4 +1,5 @@
 # atom-zh-dictionary package
+[![OSX Build Status](https://travis-ci.org/chendotjs/atom-zh-dictionary.svg?branch=master)](https://travis-ci.org/chendotjs/atom-zh-dictionary) [![Windows Build Status](https://ci.appveyor.com/api/projects/status/qf854i7oyno8oupu/branch/master?svg=true)](https://ci.appveyor.com/project/chendotjs/atom-zh-dictionary/branch/master)
 
 一个用于Atom编辑器的中/英互译的插件。
 
