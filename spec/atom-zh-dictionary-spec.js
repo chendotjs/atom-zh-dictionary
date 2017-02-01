@@ -8,7 +8,7 @@ import AtomZhDictionary from '../lib/atom-zh-dictionary';
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe('AtomZhDictionary', () => {
-  let workspaceElement, activationPromise;
+  let workspaceElement, activationPromise, editor;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
@@ -16,10 +16,21 @@ describe('AtomZhDictionary', () => {
   });
 
   describe('when the atom-zh-dictionary:mean event is triggered', () => {
-    it('hides and shows the modal panel', () => {
+    beforeEach(() => {
+      waitsForPromise(() => {
+        return atom.workspace.open().then((e) => {
+          editor = e;
+        });
+      });
+    });
+    it('shows the newly created tab', () => {
+      editor.setText('hello');
+      editor.setCursorBufferPosition([0, 0]);
+      editor.selectToEndOfLine();
+
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.atom-zh-dictionary')).not.toExist();
+      expect(workspaceElement.querySelector('.zh-dict-result')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
@@ -30,43 +41,9 @@ describe('AtomZhDictionary', () => {
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.atom-zh-dictionary')).toExist();
-
-        let atomZhDictionaryElement = workspaceElement.querySelector('.atom-zh-dictionary');
+        let atomZhDictionaryElement = workspaceElement.querySelector('.zh-dict-result');
         expect(atomZhDictionaryElement).toExist();
-
-        let atomZhDictionaryPanel = atom.workspace.panelForItem(atomZhDictionaryElement);
-        expect(atomZhDictionaryPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:mean');
-        expect(atomZhDictionaryPanel.isVisible()).toBe(false);
-      });
-    });
-
-    it('hides and shows the view', () => {
-      // This test shows you an integration test testing at the view level.
-
-      // Attaching the workspaceElement to the DOM is required to allow the
-      // `toBeVisible()` matchers to work. Anything testing visibility or focus
-      // requires that the workspaceElement is on the DOM. Tests that attach the
-      // workspaceElement to the DOM are generally slower than those off DOM.
-      jasmine.attachToDOM(workspaceElement);
-
-      expect(workspaceElement.querySelector('.atom-zh-dictionary')).not.toExist();
-
-      // This is an activation event, triggering it causes the package to be
-      // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:mean');
-
-      waitsForPromise(() => {
-        return activationPromise;
-      });
-
-      runs(() => {
-        // Now we can test for view visibility
-        let atomZhDictionaryElement = workspaceElement.querySelector('.atom-zh-dictionary');
-        expect(atomZhDictionaryElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'atom-zh-dictionary:mean');
-        expect(atomZhDictionaryElement).not.toBeVisible();
+        expect(AtomZhDictionary.dictPane).toBeDefined();
       });
     });
   });
