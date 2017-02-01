@@ -16,6 +16,11 @@
         "OS X"
       ],
       "description": "Default dictionary to look up"
+    },
+    "closeWhenLoseFocus": {
+      "default": true,
+      "type": "boolean",
+      "description": "auto close query result tab when it loses focus, not valid for OS X dictionary.app"
     }
   },
   "repository": "https://github.com/chendotjs/atom-zh-dictionary",
