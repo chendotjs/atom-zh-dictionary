@@ -20,6 +20,7 @@
       "default": "Shanbay",
       "enum": [
         "Shanbay",
+        "Youdao",
         "OS X"
       ],
       "description": "Default dictionary to look up"
@@ -36,6 +37,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "xml2js": "^0.4.17"
   }
 }
