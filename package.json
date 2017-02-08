@@ -1,7 +1,7 @@
 {
   "name": "atom-zh-dictionary",
   "main": "./lib/atom-zh-dictionary",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A plugin for tanslating english/chinese",
   "keywords": [
     "dictionary",
