@@ -8,11 +8,9 @@
 目前已集成的词典包括：
 
 - [扇贝网](https://www.shanbay.com)
+- [有道](http://dict.youdao.com)
 - OSX Dictionary.app (仅限Mac平台)
 
-接下来打算集成的词典：
-
-- [有道](http://dict.youdao.com)
 
 ## 安装
 
