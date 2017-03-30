@@ -24,6 +24,14 @@ apm install atom-zh-dictionary
 
 ![test1](https://raw.githubusercontent.com/chendotjs/atom-zh-dictionary/master/gif/test1.gif) ![test2](https://raw.githubusercontent.com/chendotjs/atom-zh-dictionary/master/gif/test2.gif)
 
+### 快捷键
+
+mac : `control + option + m`
+
+linux & windows : `Ctrl + Alt + m`
+
+当查词结果页面失去焦点或者按下`Esc`键之后，页面会自动关闭
+
 ## 可配置的选项
 
 - 词典的选择，默认为[扇贝网](https://www.shanbay.com)
